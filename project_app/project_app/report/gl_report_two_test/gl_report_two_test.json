@@ -1,0 +1,55 @@
+{
+ "add_total_row": 1,
+ "columns": [
+  {
+   "fieldname": "debit_amount",
+   "fieldtype": "Float",
+   "label": "Debit Amount",
+   "width": 0
+  },
+  {
+   "fieldname": "credit_amount",
+   "fieldtype": "Float",
+   "label": "Credit Amount",
+   "width": 0
+  }
+ ],
+ "creation": "2023-10-20 10:12:34.695697",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{}",
+ "modified": "2023-10-20 10:12:34.695697",
+ "modified_by": "Administrator",
+ "module": "Project App",
+ "name": "GL report two test",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "GL Entry",
+ "report_name": "GL report two test",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}

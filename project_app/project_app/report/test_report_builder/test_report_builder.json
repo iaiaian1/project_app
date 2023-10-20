@@ -1,0 +1,27 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2023-10-20 13:25:19.448805",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "json": "{\"filters\":[],\"fields\":[[\"name\",\"GL Entry\"],[\"voucher_number\",\"GL Entry\"],[\"party\",\"GL Entry\"],[\"account\",\"GL Entry\"],[\"voucher_type\",\"GL Entry\"],[\"credit_amount\",\"GL Entry\"],[\"debit_amount\",\"GL Entry\"],[\"posting_date\",\"GL Entry\"],[\"due_date\",\"GL Entry\"]],\"order_by\":\"`tabGL Entry`.`modified` desc\",\"add_totals_row\":true,\"page_length\":20,\"column_widths\":{\"name\":120,\"voucher_number\":120,\"party\":120,\"account\":120,\"voucher_type\":120,\"credit_amount\":120,\"debit_amount\":120,\"posting_date\":120,\"due_date\":120},\"group_by\":null}",
+ "modified": "2023-10-20 13:25:58.361578",
+ "modified_by": "Administrator",
+ "module": "Project App",
+ "name": "test report builder",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "GL Entry",
+ "report_name": "test report builder",
+ "report_type": "Report Builder",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
