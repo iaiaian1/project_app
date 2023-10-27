@@ -24,7 +24,8 @@
    "default": "JOURNAL-ENTRY-",
    "fieldname": "naming_series",
    "fieldtype": "Data",
-   "label": "Naming Series"
+   "label": "Naming Series",
+   "read_only": 1
   },
   {
    "fieldname": "party",
@@ -63,6 +64,7 @@
    "label": "Description of Transaction"
   },
   {
+   "default": "0",
    "fieldname": "total_debit",
    "fieldtype": "Currency",
    "label": "Total Debit",
@@ -70,6 +72,7 @@
    "read_only": 1
   },
   {
+   "default": "0",
    "fieldname": "total_credit",
    "fieldtype": "Currency",
    "label": "Total Credit",
@@ -77,6 +80,7 @@
    "read_only": 1
   },
   {
+   "default": "0",
    "fieldname": "difference",
    "fieldtype": "Currency",
    "label": "Difference",
@@ -95,7 +99,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-20 16:02:11.654465",
+ "modified": "2023-10-26 11:45:18.445422",
  "modified_by": "Administrator",
  "module": "Project App",
  "name": "Journal Entry",

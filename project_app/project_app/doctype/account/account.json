@@ -1,8 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{account_number}-{account-name}-{account_type}",
- "creation": "2023-10-18 12:41:46.127233",
+ "autoname": "format:{account_number}-{account_name}-{account_type}",
+ "creation": "2023-10-26 15:38:59.035922",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -12,13 +12,13 @@
   "account_name",
   "account_type",
   "opening_balance",
-  "amended_from",
   "lft",
   "rgt",
   "is_group",
   "old_parent",
   "parent_chart_of_accounts",
-  "currency"
+  "currency",
+  "amended_from"
  ],
  "fields": [
   {
@@ -49,7 +49,7 @@
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "Chart of Accounts",
+   "options": "Account",
    "print_hide": 1,
    "read_only": 1
   },
@@ -79,13 +79,13 @@
    "fieldname": "old_parent",
    "fieldtype": "Link",
    "label": "Old Parent",
-   "options": "Chart of Accounts"
+   "options": "Account"
   },
   {
    "fieldname": "parent_chart_of_accounts",
    "fieldtype": "Link",
-   "label": "Parent Chart of Accounts",
-   "options": "Chart of Accounts"
+   "label": "Parent Account",
+   "options": "Account"
   },
   {
    "default": "PHP",
@@ -94,16 +94,24 @@
    "hidden": 1,
    "label": "Currency",
    "options": "PHP"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Account",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2023-10-20 20:04:32.323419",
+ "modified": "2023-10-26 15:41:22.824405",
  "modified_by": "Administrator",
  "module": "Project App",
- "name": "Chart of Accounts",
+ "name": "Account",
  "naming_rule": "Expression",
  "nsm_parent_field": "parent_chart_of_accounts",
  "owner": "Administrator",

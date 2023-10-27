@@ -3,6 +3,7 @@
  "allow_rename": 1,
  "creation": "2023-10-18 17:14:27.969975",
  "doctype": "DocType",
+ "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "account",
@@ -15,26 +16,36 @@
   {
    "fieldname": "account",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Account",
-   "options": "Chart of Accounts"
+   "options": "Account",
+   "reqd": 1
   },
   {
    "fieldname": "party",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Party",
-   "options": "Party"
+   "options": "Party",
+   "reqd": 1
   },
   {
+   "default": "0",
    "fieldname": "debit",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Debit",
-   "options": "currency"
+   "options": "currency",
+   "reqd": 1
   },
   {
+   "default": "0",
    "fieldname": "credit",
    "fieldtype": "Currency",
+   "in_list_view": 1,
    "label": "Credit",
-   "options": "currency"
+   "options": "currency",
+   "reqd": 1
   },
   {
    "default": "PHP",
@@ -48,7 +59,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2023-10-20 15:59:58.787605",
+ "modified": "2023-10-27 09:28:02.693980",
  "modified_by": "Administrator",
  "module": "Project App",
  "name": "Accounting Entries",

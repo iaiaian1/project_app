@@ -22,11 +22,11 @@ frappe.ui.form.on('Purchase Invoice', {
 
 	onload: function(frm){
 		// Set links filter for purchase invoice Link Fields onload
-		frm.set_query('customer', () => {
+		frm.set_query('supplier', () => {
 			return {
 				filters: {
 					party_type: 'supplier',
-					docstatus: 1
+					// docstatus: 1
 				}
 			}
 		})
@@ -35,7 +35,7 @@ frappe.ui.form.on('Purchase Invoice', {
 			return {
 				filters: {
 					account_type: 'Liability',
-					docstatus: 1
+					// docstatus: 1
 				}
 			}
 		})
@@ -43,7 +43,7 @@ frappe.ui.form.on('Purchase Invoice', {
 			return {
 				filters: {
 					account_type: 'Expense',
-					docstatus: 1
+					// docstatus: 1
 				}
 			}
 		})

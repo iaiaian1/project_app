@@ -21,7 +21,7 @@ class SalesInvoice(Document):
 		gl.debit_amount = self.total_amount
 		gl.credit_amount = 0
 		gl.voucher_type = "Sales Invoice"
-		gl.voucher_number = self.name
+		gl.voucher_number = self.name + " - Asset"
 
 		gl.insert()
 
@@ -34,9 +34,14 @@ class SalesInvoice(Document):
 		gl.debit_amount = 0
 		gl.credit_amount = self.total_amount
 		gl.voucher_type = "Sales Invoice"
-		gl.voucher_number = self.name
+		gl.voucher_number = self.name + " - Income"
 
 		gl.insert()
+
+	def on_cancel(self):
+		frappe.db.set_value('GL Entry', self.name + " - Asset", 'is_cancelled', 1)
+		frappe.db.set_value('GL Entry', self.name + " - Income", 'is_cancelled', 1)
+		# breakpoint()
 
 	# def new_journal(self):
 	# 	journal = frappe.new_doc('Journal Entry')

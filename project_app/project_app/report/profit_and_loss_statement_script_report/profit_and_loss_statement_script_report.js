@@ -2,7 +2,7 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["Profit and Loss Statement"] = {
+frappe.query_reports["Profit and Loss Statement Script Report"] = {
 	"filters": [
 		{
 			"fieldname": "posting_date",
@@ -14,17 +14,5 @@ frappe.query_reports["Profit and Loss Statement"] = {
 			"label": "Due Date",
 			"fieldtype": "Date",
 		},
-		{
-			"fieldname": "party",
-			"label": "Party",
-			"fieldtype": "Link",
-            'options': 'Party'
-		},
-		{
-			"fieldname": "account",
-			"label": "Account",
-			"fieldtype": "Link",
-			'options': 'Account'
-		}
 	]
 };

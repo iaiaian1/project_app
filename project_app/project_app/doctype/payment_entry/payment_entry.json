@@ -24,7 +24,8 @@
    "default": "PAYMENT-ENTRY-",
    "fieldname": "naming_series",
    "fieldtype": "Data",
-   "label": "Naming Series"
+   "label": "Naming Series",
+   "read_only": 1
   },
   {
    "fieldname": "posting_date",
@@ -37,28 +38,29 @@
    "fieldname": "payment_type",
    "fieldtype": "Select",
    "label": "Payment Type",
-   "options": "Receive\nPay"
+   "options": "Receive\nPay",
+   "reqd": 1
   },
   {
    "fieldname": "party_type",
    "fieldtype": "Select",
    "label": "Party Type",
-   "options": "Customer\nSupplier"
+   "options": "Customer\nSupplier",
+   "read_only": 1
   },
   {
    "fieldname": "party",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Party",
-   "options": "Party",
-   "reqd": 1
+   "options": "Party"
   },
   {
    "fieldname": "account_paid_from",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Account Paid From",
-   "options": "Chart of Accounts",
+   "options": "Account",
    "reqd": 1
   },
   {
@@ -66,7 +68,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Account Paid To",
-   "options": "Chart of Accounts",
+   "options": "Account",
    "reqd": 1
   },
   {
@@ -97,7 +99,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-20 16:00:37.197494",
+ "modified": "2023-10-26 11:26:59.221024",
  "modified_by": "Administrator",
  "module": "Project App",
  "name": "Payment Entry",

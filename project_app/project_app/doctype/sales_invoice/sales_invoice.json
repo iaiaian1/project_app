@@ -12,21 +12,22 @@
   "customer",
   "posting_date",
   "payment_due_date",
-  "enable_change_rate",
   "items_table",
   "total_qty",
   "total_amount",
   "debit_to",
   "income_account",
   "amended_from",
-  "currency"
+  "currency",
+  "enable_change_rate"
  ],
  "fields": [
   {
    "default": "SALES-INVOICE-",
    "fieldname": "naming_series",
    "fieldtype": "Data",
-   "label": "Naming Series"
+   "label": "Naming Series",
+   "read_only": 1
   },
   {
    "fieldname": "customer",
@@ -70,12 +71,6 @@
    "read_only": 1
   },
   {
-   "default": "0",
-   "fieldname": "enable_change_rate",
-   "fieldtype": "Check",
-   "label": "Enable Change Rate"
-  },
-  {
    "fieldname": "total_qty",
    "fieldtype": "Int",
    "label": "Total Qty",
@@ -92,14 +87,14 @@
    "fieldname": "debit_to",
    "fieldtype": "Link",
    "label": "Debit To",
-   "options": "Chart of Accounts",
+   "options": "Account",
    "reqd": 1
   },
   {
    "fieldname": "income_account",
    "fieldtype": "Link",
    "label": "Income Account",
-   "options": "Chart of Accounts",
+   "options": "Account",
    "reqd": 1
   },
   {
@@ -109,12 +104,20 @@
    "hidden": 1,
    "label": "Currency",
    "options": "PHP"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_change_rate",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Enable Change Rate",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-10-20 15:47:12.475462",
+ "modified": "2023-10-26 16:24:03.298000",
  "modified_by": "Administrator",
  "module": "Project App",
  "name": "Sales Invoice",

@@ -26,7 +26,7 @@ frappe.ui.form.on('Sales Invoice', {
 			return {
 				filters: {
 					party_type: 'customer',
-					docstatus: 1
+					// docstatus: 1
 				}
 			}
 		})
@@ -35,7 +35,7 @@ frappe.ui.form.on('Sales Invoice', {
 			return {
 				filters: {
 					account_type: 'Asset',
-					docstatus: 1
+					// docstatus: 1
 				}
 			}
 		})
@@ -43,7 +43,7 @@ frappe.ui.form.on('Sales Invoice', {
 			return {
 				filters: {
 					account_type: 'Income',
-					docstatus: 1
+					// docstatus: 1
 				}
 			}
 		})

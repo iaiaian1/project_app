@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"ZdLUDv1opW\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Project App</span>\",\"col\":12}},{\"id\":\"wZfLqZbiBC\",\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"id\":\"GL6NqMulg3\",\"type\":\"card\",\"data\":{\"card_name\":\"Transactions\",\"col\":4}},{\"id\":\"GUjXUrC770\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "content": "[{\"id\":\"ZdLUDv1opW\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Project App</span>\",\"col\":12}},{\"id\":\"vRT_P5T2YO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"General Ledger Report\",\"col\":3}},{\"id\":\"AM_RDN90uj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trial Balance Script Report\",\"col\":3}},{\"id\":\"kPXhuIXWdA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Profit and Loss Statement\",\"col\":3}},{\"id\":\"wZfLqZbiBC\",\"type\":\"card\",\"data\":{\"card_name\":\"Master\",\"col\":4}},{\"id\":\"GL6NqMulg3\",\"type\":\"card\",\"data\":{\"card_name\":\"Transactions\",\"col\":4}}]",
  "creation": "2023-10-17 21:18:29.559384",
  "custom_blocks": [],
  "docstatus": 0,
@@ -43,9 +43,9 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Chart of Accounts",
+   "label": "Account",
    "link_count": 0,
-   "link_to": "Chart of Accounts",
+   "link_to": "Account",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -107,47 +107,9 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Reports",
-   "link_count": 3,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "General Ledger Report",
-   "link_count": 0,
-   "link_to": "GL Entry Script Report",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Trial Balance",
-   "link_count": 0,
-   "link_to": "Trial Balance Report Builder 4",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Profit and Loss Statement",
-   "link_count": 0,
-   "link_to": "Profit and Loss Statement",
-   "link_type": "Report",
-   "onboard": 0,
-   "type": "Link"
   }
  ],
- "modified": "2023-10-20 20:05:16.124720",
+ "modified": "2023-10-27 14:12:32.101265",
  "modified_by": "Administrator",
  "module": "Project App",
  "name": "Project App",
@@ -158,6 +120,28 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 1.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Profit and Loss Statement",
+   "link_to": "Profit and Loss Statement Script Report",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Trial Balance Script Report",
+   "link_to": "Trial Balance Script Report",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "General Ledger Report",
+   "link_to": "GL Entry Script Report",
+   "type": "Report"
+  }
+ ],
  "title": "Project App"
 }

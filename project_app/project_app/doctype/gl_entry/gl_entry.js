@@ -5,16 +5,6 @@ frappe.ui.form.on('GL Entry', {
 	// refresh: function(frm) {
 
 	// }
-	onload: function(frm){
-		frm.set_query('account', () => {
-			return {
-				filters: {
-					docstatus: 1
-				}
-			}
-		})
-	},
-
 	posting_date: function(frm){
 		frm.call(
 			{

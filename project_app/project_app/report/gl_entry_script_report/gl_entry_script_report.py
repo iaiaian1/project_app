@@ -34,8 +34,8 @@ def get_columns():
 			"fieldname": "account",
 			"label": "Account",
 			"fieldtype": "Dynamic Link",
-			'options': 'Chart of Accounts',
-			"width": 300
+			'options': 'Account',
+			"width": 250
 		},
 		{
 			"fieldname": "debit_amount",
@@ -55,11 +55,26 @@ def get_columns():
 			"fieldname": "posting_date",
 			"label": "Posting Date",
 			"fieldtype": "Date",
+			"width": 100
 		},
 		{
 			"fieldname": "due_date",
 			"label": "Due Date",
 			"fieldtype": "Date",
+			"width": 100
+		},
+		{
+			"fieldname": "voucher_type",
+			"label": "Voucher Type",
+			"fieldtype": "Data",
+			"width": 200
+		},
+		{
+			"fieldname": "voucher_number",
+			"label": "Voucher Number",
+			"fieldtype": "Link",
+			"options": "GL Entry",
+			"width": 250
 		},
 	]
 
@@ -68,7 +83,7 @@ def get_filtered_data(filters):
 	filtered_data= {}
 	filtered_data = frappe.get_all(
 		doctype='GL Entry',
-		fields=['posting_date', 'due_date', "party", "account", "debit_amount", "credit_amount", "currency"],
+		fields=['posting_date', 'due_date', "party", "account", "debit_amount", "credit_amount", "currency", "voucher_type", "voucher_number"],
 		filters=filter,
 		# order_by='account desc'
 	)

@@ -4,5 +4,5 @@
 # import frappe
 from frappe.utils.nestedset import NestedSet
 
-class ChartofAccounts(NestedSet):
+class Account(NestedSet):
 	pass

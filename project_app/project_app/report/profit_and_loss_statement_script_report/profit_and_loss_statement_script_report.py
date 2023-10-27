@@ -10,6 +10,7 @@ def execute(filters=None):
 
 	columns = get_columns()
 	data = get_filtered_data(filters)
+	skip_total_rows = False
 
 	if not data:
 		frappe.msgprint("No records found")
@@ -19,70 +20,89 @@ def execute(filters=None):
 	# This is the REQUIRED order or return empty array []
 	# https://discuss.frappe.io/t/script-report-python-file-returns-advanced-use/33489/4
 	# return columns, data, message, chart, report_summary
-	return columns, data
+	return columns, data, None, None, None
 
 def get_columns():
 	return [
-		{
-			"fieldname": "party",
-			"label": "Party",
-			"fieldtype": "Dynamic Link",
-			'options': 'Party'
-		},
 		{
 			"fieldname": "account",
 			"label": "Account",
 			"fieldtype": "Dynamic Link",
 			'options': 'Account',
-			"width": 300
-		},
-		{
-			"fieldname": "credit_amount",
-			"label": "Total Income",
-			"fieldtype": "Currency",
-			"options": "currency"
+			"width": 250
 		},
 		{
 			"fieldname": "debit_amount",
-			"label": "Total Expense",
+			"label": "Total Debit Amount",
 			"fieldtype": "Currency",
 			"options": "currency"
+			# "add_totals_row": "true"
+		},
+		{
+			"fieldname": "credit_amount",
+			"label": "Total Credit Amount",
+			"fieldtype": "Currency",
+			"options": "currency"
+			# "add_totals_row": "true"
 		},
 		{
 			"fieldname": "posting_date",
 			"label": "Posting Date",
 			"fieldtype": "Date",
+			"width": 100
 		},
 		{
 			"fieldname": "due_date",
 			"label": "Due Date",
 			"fieldtype": "Date",
+			"width": 100
 		},
 	]
 
 def get_filtered_data(filters):
 	filter = get_filters(filters)
-	filtered_data= []
+	filtered_data= {}
 	filtered_data = frappe.get_all(
 		doctype='GL Entry',
-		fields=['posting_date', 'due_date', "party", "account", "debit_amount", "credit_amount", "currency"],
+		fields=["account", "debit_amount", "credit_amount", "currency", "posting_date", "due_date"],
 		filters=filter,
-		# Explanation for this in the docs is NON-EXISTENT. Had to scour the source code.
 		or_filters=[
-			['account', 'like', '%Income'],
-			['account', 'like', '%Expense'],
+			["account", "=", "2023-Gada Electronics-Income"],
+			["account", "=", "2023-Gada Electronics-Expense"],
 		]
 		# order_by='account desc'
 	)
 
-	# filtered_data.append
-	# breakpoint()
+	# income = 0
+	# expense = 0
 
 	# for data in filtered_data:
-	# 	if (data.get("account") == "2023-Gada Electronics-Expense"):
-	# 			data["total_expense"] = data.get("credit_amount")
-	# 	elif (data.get("account") == "2023-Gada Electronics-Income"):
-	# 		data["total_income"] = data.get("credit_amount")
+	# 	if data.account == "2023-Gada Electronics-Income":
+	# 		income += data["debit_amount"]
+	# 	elif data.account == "2023-Gada Electronics-Expense":
+	# 		expense += data["credit_amount"]
+
+	# profit_loss_data = []
+	# profit_loss_data.append(
+	# 	{
+	# 		"account": "2023-Gada Electronics-Income",
+	# 		"currency": "PHP",
+	# 		"total_income_amount": income,
+	# 		"total_credit_amount": 0,
+	# 		"posting_date": 
+
+	# 	},
+	# 	{
+	# 		"account": "2023-Gada Electronics-Expense",
+	# 		"currency": "PHP",
+	# 		"total_income_amount": 0,
+	# 		"total_credit_amount": expense
+	# 	},
+	# )
+
+
+	# Process data and match them to the account
+	# breakpoint()
 
 	return filtered_data
 
@@ -102,7 +122,5 @@ def get_filters(filters):
 				# conditions += '"posting_date": [">=", "{}"], "modified": ["<=", "{}"]'.format(filters.get("from_date"), filters.get("to_date"))
 			# filter[key]= value
 
-	# filter.append({"account": ['like', '%Income', 'or', 'account', 'like', '%Expense']})
-	# filter.append({"account": ['like', '2023-Gada Electronics-Expense%']})
 	# Return a list/array of field objects with key value pair of name : query. 
 	return filter

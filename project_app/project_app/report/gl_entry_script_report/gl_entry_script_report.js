@@ -24,7 +24,7 @@ frappe.query_reports["GL Entry Script Report"] = {
 			"fieldname": "account",
 			"label": "Account",
 			"fieldtype": "Link",
-			'options': 'Chart of Accounts'
+			'options': 'Account'
 		}
 	]
 };

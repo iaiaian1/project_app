@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestChartofAccounts(FrappeTestCase):
+class TestAccount(FrappeTestCase):
 	pass

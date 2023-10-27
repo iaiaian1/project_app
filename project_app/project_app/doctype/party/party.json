@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:party_name",
  "creation": "2023-10-17 21:30:11.474837",
  "default_view": "List",
  "doctype": "DocType",
@@ -18,14 +19,15 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Party Type",
-   "options": "customer\nsupplier"
+   "options": "Customer\nSupplier"
   },
   {
    "fieldname": "party_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Party Name"
+   "label": "Party Name",
+   "unique": 1
   },
   {
    "fieldname": "amended_from",
@@ -38,12 +40,12 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-10-19 14:12:31.691192",
+ "modified": "2023-10-26 16:07:00.287849",
  "modified_by": "Administrator",
  "module": "Project App",
  "name": "Party",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
@@ -60,10 +62,8 @@
   }
  ],
  "search_fields": "party_type",
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "party_name",
  "track_changes": 1
 }

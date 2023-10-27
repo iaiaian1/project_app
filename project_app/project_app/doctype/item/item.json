@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "field:item_code",
  "creation": "2023-10-17 21:21:14.629376",
  "default_view": "List",
  "doctype": "DocType",
@@ -64,12 +65,12 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2023-10-20 15:50:26.637408",
+ "modified": "2023-10-26 15:36:49.259418",
  "modified_by": "Administrator",
  "module": "Project App",
  "name": "Item",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {
