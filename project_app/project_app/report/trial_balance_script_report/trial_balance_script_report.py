@@ -60,7 +60,6 @@ def get_filtered_data(filters):
 	# Process data and match them to the account
 	account_data = frappe.get_all(
 		doctype='Account',
-		filters=filter,
 		fields=["name"],
 	)
 
@@ -79,7 +78,11 @@ def get_filtered_data(filters):
 	return account_data
 
 def get_filters(filters):
-	filter = {}
+	filter = [
+		{
+			"is_cancelled" : 0
+		}
+	]
 	for key, value in filters.items():
 		if filters.get(key):
 			filter[key] = value

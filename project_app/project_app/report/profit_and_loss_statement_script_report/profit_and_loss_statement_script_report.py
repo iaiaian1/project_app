@@ -107,7 +107,11 @@ def get_filtered_data(filters):
 	return filtered_data
 
 def get_filters(filters):
-	filter = []
+	filter = [
+		{
+			"is_cancelled" : 0
+		}
+	]
 	for key, value in filters.items():
 		if filters.get(key):
 			if key == "party" or key == "account":
